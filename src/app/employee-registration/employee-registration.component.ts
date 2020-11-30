@@ -11,23 +11,22 @@ export class EmployeeRegistrationComponent implements OnInit {
   about: string = '';
   date: string = '';
 
-  data:any=[];
+  data: any = [{}];
   constructor() {}
 
   ngOnInit(): void {}
 
   register() {
-    let userDetails={
-      name:this.name,
-      position:this.position,
-      about:this.about,
-      date:this.date
-    }
-    this.data= JSON.parse(localStorage.getItem("user")|| '{}');
-    this.data.push(userDetails)
-    console.log(this.data)
+    var userDetails = {
+      name: this.name,
+      position: this.position,
+      about: this.about,
+      date: this.date,
+    };
+    this.data = JSON.parse(localStorage.getItem('user') || '{}');
+    this.data.push(userDetails);
+    console.log(this.data);
 
-    localStorage.setItem("user",JSON.stringify(this.data))
-      
+    localStorage.setItem('user', JSON.stringify(this.data));
   }
-};
+}
