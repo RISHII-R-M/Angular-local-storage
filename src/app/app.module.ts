@@ -19,7 +19,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { FormsModule } from '@angular/forms';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import {MatMenuModule} from '@angular/material/menu';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import {MatCardModule} from '@angular/material/card';
     MatToolbarModule,
     MatTabsModule,
     MatIconModule,
+    MatMenuModule,
     MatButtonModule,
     MatInputModule,
     MatDatepickerModule,
@@ -45,7 +48,7 @@ import {MatCardModule} from '@angular/material/card';
     MatNativeDateModule,
     FormsModule,
     MatCardModule,
-
+    MatSnackBarModule,
   ],
   providers: [MatDatepickerModule],
   bootstrap: [AppComponent],

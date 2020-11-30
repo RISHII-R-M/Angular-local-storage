@@ -1,42 +1,43 @@
-<nav
-  class="navbar navbar-expand-lg navbar-light bg-light"
-  style="height: 100px"
+<mat-toolbar
+  class="app-toolbar no-print mat-toolbar mat-primary mat-elevation-z6 mat-toolbar-multiple-rows"
+  color="primary"
+  style="width: 100"
 >
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button
-    class="navbar-toggler"
-    type="button"
-    data-toggle="collapse"
-    data-target="#navbarSupportedContent"
-    aria-controls="navbarSupportedContent"
-    aria-expanded="false"
-    aria-label="Toggle navigation"
-  >
-    <span class="navbar-toggler-icon"></span>
-  </button>
+  <mat-toolbar-row>
+    <button
+      [matMenuTriggerFor]="menu"
+      class="hamburger mat-button"
+      mat-button=""
+      title="Docs menu"
+    >
+      <span class="mat-button-wrapper"
+        ><mat-icon class="mat-icon" role="img" svgicon="menu" aria-hidden="true"
+          ><svg
+            focusable="false"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+            ></path></svg></mat-icon
+      ></span>
+      <div class="mat-button-ripple mat-ripple" matripple=""></div>
+      <div class="mat-button-focus-overlay"></div>
+    </button>
+    <div class="d-none d-sm-block d-md-block">
+      <button mat-button routerLink="/employee-registration">
+        Employee Registration
+      </button>
+      &nbsp; &nbsp;
+      <button mat-button routerLink="/employee-listing">Employee List</button>
+    </div>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          href=""
-          routerLink="/employee-registration"
-          tabindex="-1"
-          aria-disabled="true"
-          >Employee Registration</a
-        >
-      </li>
-      <li class="nav-item">
-        <a
-          class="nav-link"
-          href=""
-          routerLink="/employee-listing"
-          tabindex="-1"
-          aria-disabled="true"
-          >Employee List</a
-        >
-      </li>
-    </ul>
-  </div>
-</nav>
+    <span class="example-spacer"></span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-menu #menu="matMenu">
+  <button mat-menu-item routerLink="/employee-registration">
+    Employee Registration
+  </button>
+  <button mat-menu-item routerLink="/employee-listing">Employee Lis</button>
+</mat-menu>

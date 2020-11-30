@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-employee-registration',
@@ -12,7 +13,7 @@ export class EmployeeRegistrationComponent implements OnInit {
   date: string = '';
 
   data: any = [{}];
-  constructor() {}
+  constructor(private _snackBar: MatSnackBar) {}
 
   ngOnInit(): void {}
 
@@ -30,5 +31,11 @@ export class EmployeeRegistrationComponent implements OnInit {
     console.log(this.data);
 
     localStorage.setItem('user', JSON.stringify(this.data));
+    this.openSnackBar("Thanks For Registering!!!","")
+  }
+  openSnackBar(message: string, action: string) {
+    this._snackBar.open(message, action, {
+      duration: 2000,
+    });
   }
 }
