@@ -23,6 +23,9 @@ export class EmployeeRegistrationComponent implements OnInit {
       about: this.about,
       date: this.date,
     };
+    this.data = JSON.parse(localStorage.getItem('user') || '{}');
+
+    this.data = [userDetails, ...this.data];
 
     console.log(this.data);
 
