@@ -30,5 +30,4 @@ export class EmployeeRegistrationComponent implements OnInit {
     localStorage.setItem("user",JSON.stringify(this.data))
       
   }
-}
-2;
+};
