@@ -1,0 +1,42 @@
+<div>
+  <div class="conatainer-fluid" class="p-5">
+    <div class="row">
+      <div class="col-lg-3 mt-5" *ngFor="let user of data; index as i">
+        <mat-card class="example-card">
+          <mat-card-content>
+            <div class="d-flex flex-row justify-content-between p-0">
+              <span class="material-icons" style="font-size: 70px"
+                >account_circle</span
+              >
+              <div class="D-flex p-0 ml-2 justify-content-left align-items-eft">
+                <h1
+                  class="p-0 m-0 bold text-uppercase"
+                  style="font-weight: 900px"
+                >
+                  {{ user.name }}
+                </h1>
+                <h3 class="m-0 text-muted text-uppercase">
+                  {{ user.position }}
+                </h3>
+              </div>
+              <span
+                class="material-icons"
+                style="cursor: pointer; font-size: 40px"
+                (click)="delete(i)"
+              >
+                clear
+              </span>
+            </div>
+
+            <div class="D-flex p-0 ml-2 pt-3 pb-3">
+              <h1 class="p-0 m-0 text-muted">{{ user.about }}</h1>
+            </div>
+          </mat-card-content>
+          <mat-card-actions>
+            <div class="d-flex justify-content-end align-items-end"></div>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
